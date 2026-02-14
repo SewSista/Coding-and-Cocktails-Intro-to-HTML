@@ -1,0 +1,31 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "hostRequirements": {
+      "cpus": 2
+    },
+    
+    "portsAttributes": {
+      "3000": {
+        "label": "Application",
+        "onAutoForward": "openPreview"
+      }
+    },
+    "forwardPorts": [
+        3000
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "yandeu.five-server",
+                "-github.copilot-chat"
+            ],
+            "settings": {
+                "github.copilot.enable": { "*": false },
+                "github.chat.agent.enabled": false,
+                "github.copilot.chat.agent.autoFix": false,
+                "github.copilot.inlineSuggest.enable": false,
+                "chat.commandCenter.enabled": false
+            }
+        }
+    }
+}
